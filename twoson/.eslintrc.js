@@ -10,7 +10,7 @@ module.exports = {
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-		'indent': [2, "tab"],
+		'indent': [2, 'tab'],
 		'no-tabs': 0
 	},
 	parserOptions: {
