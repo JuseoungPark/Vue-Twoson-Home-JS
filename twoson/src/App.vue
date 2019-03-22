@@ -1,35 +1,52 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>fas fa-external-link-alt</v-icon>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+	<div id="app">
+		<MainVisual></MainVisual>
+		<Portpolio></Portpolio>
+		<!-- <CurrentPortpolio></CurrentPortpolio> -->
+		<Solution></Solution>
+		<!-- <selectBox></selectBox> -->
+		<!-- <SelectBox /> -->
+		<News>
+		</News>
+		<footerMenuList></footerMenuList>
+		<Footer></Footer>
+	</div>
 </template>
 
 <script>
+import MainVisual from '@/components/MainVisual.vue'
+import Header from '@/components/Header.vue'
+import Portpolio from '@/components/SectionPortpolio.vue'
+import CurrentPortpolio from '@/components/Portpolio.vue'
+import Solution from '@/components/Solution'
+import SelectBox from '@/components/Select'
+import News from '@/components/SectionNews'
+import NewsSlide from '@/components/newsSlide'
+import footerMenuList from '@/components/footerMenu'
+import Footer from '@/components/Footer'
+import SecTitle from '@/components/SectionTitle'
 
 export default {
-  name: 'App',
-  data () {
-    return {
-      //
-    }
-  }
+	name: 'app',
+	components: {
+		MainVisual,
+		Header,
+		Portpolio,
+		CurrentPortpolio,
+		Solution,
+		SelectBox,
+		News,
+		NewsSlide,
+		footerMenuList,
+		Footer,
+		SecTitle,
+	},
 }
 </script>
+
+<style>
+	* {
+		text-decoration: none;
+		list-style-type: none;
+	}
+</style>
