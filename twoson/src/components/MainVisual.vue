@@ -1,7 +1,7 @@
 <template>
 	<div id="main-visual">
-		<Header />
 		<div class="overlay"></div>
+		<Header />
 		<div class="main-copy">
 			<h3 class="main-sub-title">두손소프트는 향합니다</h3>
 			<h2 class="main-title">SI 사업 기반<br> 자체 플랫폼 서비스</h2>
@@ -9,13 +9,9 @@
 		</div>
 	</div>
 </template>
-<script>
-import Header from '@/components/Header'
 
+<script>
 export default {
-	components: {
-		Header
-	}
 }
 </script>
 
@@ -24,12 +20,10 @@ export default {
 		background: url('../assets/main-visual-01.png') 50% 50% no-repeat;
 		width: 100%;
 		height: 100vh;
-		position: relative;
 	}
 	.overlay {
 		height: 100vh;
-		background: #000;
-		opacity: .5;
+		background: rgba(0, 0, 0, .5);
 	}
 	.main-copy {
 		position: absolute;

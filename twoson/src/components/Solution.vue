@@ -1,7 +1,6 @@
 <template>
 	<div id="solution">
-		<h2 class="sec-title">맞춤 솔루션</h2>
-		<h3 class="sec-sub-title">상황에 알맞는 솔루션을 찾아보세요.<br> TS Solution은 '경험을 바탕으로 한 기술'을 모토로 달려왔습니다. </h3>
+		<Title />
 		<div class="occupational-group-search">
 			<div class="select-box">
 				<p>우리 기업은</p>
@@ -24,7 +23,7 @@
 				</v-menu>
 				<em>관련 사업을 하고 있습니다.</em>
 			</div>
-			<button>검색하기</button>			
+			<button>검색하기</button>	
 		</div>
 		<v-layout row wrap>
 			<v-flex xs12 sm5 md3>
@@ -46,29 +45,17 @@ export default {
 	data: () => ({
 		items: [
 			'보험', '카드', '은행', '유통', '서비스', '교육', '의료'
-		]
+		],
 	})
 }
 </script>
 
 <style>
 	#solution {
-		padding: 110px 0 60px;
+		padding-bottom:60px;
 		text-align: center;
 		width: 75%;
 		margin: 0 auto;
-	}
-	.sec-title {
-		font-size: 46px;
-		font-weight: 700;
-		letter-spacing: -0.025em;
-		margin-bottom: 20px;
-	}
-	.sec-sub-title {
-		font-size: 23px;
-		font-weight: 400;
-		letter-spacing: -0.025em;
-		margin-bottom: 90px;
 	}
 	.occupational-group-search {
 		text-align: left;

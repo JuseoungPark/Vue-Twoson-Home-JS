@@ -1,14 +1,8 @@
 <template>
 		<div id="header">
-			<v-card
-			color=""
-			flat
-			>
-				<v-toolbar color="black" dark>
-					<v-toolbar-side-icon></v-toolbar-side-icon>
-					<v-spacer></v-spacer>
-				</v-toolbar>
-			</v-card>
+			<v-toolbar-side-icon dark></v-toolbar-side-icon>
+			<img :src="img" :alt="imgAlt">
+			<button>{{ contact }}</button>
 		</div>
 </template>
 
@@ -17,20 +11,25 @@ export default {
 	name: 'head',
 	data () {
 		return {
-
+			img: require('@/assets/logo.png'),
+			imgAlt: '로고임',
+			contact: '컨텍할껴말껴'
 		}
 	}
 }
 </script>
 
 <style>
-	.header {
-		position: absolute;
+	#header {
+		position: fixed;
 		left: 0;
 		top: 0;
-		z-index: 99;
+		z-index: 9;
+		height: 114px;
+		width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, .4);
 	}
-	.v-toolbar__content {
-		padding: 0 12%;
+	#header button {
+		color: #fff;
 	}
 </style>

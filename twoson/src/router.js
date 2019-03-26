@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Portpolio from './components/Portpolio.vue'
 
 Vue.use(Router)
 
@@ -13,11 +12,6 @@ export default new Router({
 			path: '/',
 			name: 'home',
 			component: Home
-		},
-		{
-			path: '/portpolio',
-			name: 'portpolio',
-			component: Portpolio
 		},
 		{
 			path: '/about',

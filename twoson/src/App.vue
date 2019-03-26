@@ -8,14 +8,13 @@
 		<!-- <SelectBox /> -->
 		<News>
 		</News>
-		<footerMenuList></footerMenuList>
-		<Footer></Footer>
+		<footerMenuList />
+		<Footer />
 	</div>
 </template>
 
 <script>
 import MainVisual from '@/components/MainVisual.vue'
-import Header from '@/components/Header.vue'
 import Portpolio from '@/components/SectionPortpolio.vue'
 import CurrentPortpolio from '@/components/Portpolio.vue'
 import Solution from '@/components/Solution'
@@ -23,14 +22,12 @@ import SelectBox from '@/components/Select'
 import News from '@/components/SectionNews'
 import NewsSlide from '@/components/newsSlide'
 import footerMenuList from '@/components/footerMenu'
-import Footer from '@/components/Footer'
 import SecTitle from '@/components/SectionTitle'
 
 export default {
 	name: 'app',
 	components: {
 		MainVisual,
-		Header,
 		Portpolio,
 		CurrentPortpolio,
 		Solution,
@@ -38,7 +35,6 @@ export default {
 		News,
 		NewsSlide,
 		footerMenuList,
-		Footer,
 		SecTitle,
 	},
 }
