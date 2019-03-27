@@ -1,8 +1,12 @@
 <template>
 		<div id="header">
-			<v-toolbar-side-icon dark></v-toolbar-side-icon>
-			<img :src="img" :alt="imgAlt">
-			<button>{{ contact }}</button>
+			<div class="inner">
+				<v-toolbar-side-icon dark></v-toolbar-side-icon>
+				<h1>
+					<img :src="img" :alt="imgAlt">
+				</h1>
+				<button>{{ contact }}</button>
+			</div>
 		</div>
 </template>
 
@@ -12,8 +16,8 @@ export default {
 	data () {
 		return {
 			img: require('@/assets/logo.png'),
-			imgAlt: '로고임',
-			contact: '컨텍할껴말껴'
+			imgAlt: '두손소프트 로고',
+			contact: '컨텍할거면 클릭해라'
 		}
 	}
 }
@@ -28,6 +32,7 @@ export default {
 		height: 114px;
 		width: 100%;
 		border-bottom: 1px solid rgba(255, 255, 255, .4);
+		padding-top: 28px;
 	}
 	#header button {
 		color: #fff;

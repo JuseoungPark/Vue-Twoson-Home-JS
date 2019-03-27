@@ -1,6 +1,9 @@
 <template>
 	<div id="solution">
-		<Title />
+		<Title
+			:titleOfChild="title"
+			:subTitleOfChild="subTitle"
+		></Title>
 		<div class="occupational-group-search">
 			<div class="select-box">
 				<p>우리 기업은</p>

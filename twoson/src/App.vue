@@ -45,4 +45,16 @@ export default {
 		text-decoration: none;
 		list-style-type: none;
 	}
+	.inner,
+	.innerWrap {
+		width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.clear::after {
+		content: '';
+		clear: both;
+	}
 </style>

@@ -1,11 +1,10 @@
 <template>
 	<div class="news-bg">
-		<Title></Title>
-		<h2 class="sec-title">두손 소식</h2>
-		<h3 class="sec-sub-title">뉴스부터 사내 소식까지 <br>두손소프트의 따끈따근한 이야기를 전해드립니다.</h3>
-		<!-- <newsSlide></newsSlide> -->
+		<Title
+			:titleOfChild="title"
+			:subTitleOfChild="subTitle"
+		></Title>
 		<NewsSlide />
-		
 		<SecTitle></SecTitle>
 	</div>
 </template>
@@ -19,6 +18,13 @@ export default {
 		SecTitle,
 		NewsSlide
 	},
+
+	data () {
+		return {
+			title: '두손 소식',
+			subTitle: '뉴스부터 사내 소식까지 <br> 두손소프트의 따끈따근한 이야기를 전해드립니다.',
+		}
+	}
 }
 </script>
 
