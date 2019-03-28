@@ -40,16 +40,25 @@
 				</v-card>
 			</v-flex>
 		</v-layout>
+		<KeyWord />
 	</div>
 </template>
 
 <script>
+import KeyWord from '@/components/Keyword'
+
 export default {
 	data: () => ({
+		title: '맞춤 솔루션',
+		subTitle: '상황에 알맞는 솔루션을 찾아보세요. <br>TS Solution은 경험을 바탕으로 한 기술을 모토로 달려왔습니다.',
 		items: [
 			'보험', '카드', '은행', '유통', '서비스', '교육', '의료'
 		],
-	})
+	}),
+
+	components: {
+		KeyWord
+	}
 }
 </script>
 
