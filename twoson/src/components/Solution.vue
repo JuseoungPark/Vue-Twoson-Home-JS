@@ -28,24 +28,17 @@
 			</div>
 			<button>검색하기</button>	
 		</div>
-		<v-layout row wrap>
-			<v-flex xs12 sm5 md3>
-				<v-card dark color="purple" class="popularityKeyword">
-					<v-card-text>여기는 인기키워드 sdfsdfsdfdddddddddddddddddddddddddddddddddssssssssdfsdfsd</v-card-text>
-				</v-card>
-			</v-flex>
-			<v-flex xs12 sm5 md5 offset-xs0 offset-lg2>
-				<v-card dark color="green" class="popularitySolution">
-					<v-card-text>여기는 인기솔루션 dsfsdfsddddddddddddddddsfsdfsdfsdfsdfsdfsdfddsfdsqrwerweyerfcxxzgbdfhsdgrfeqwrfsdfsdfsdfsdfsdf</v-card-text>
-				</v-card>
-			</v-flex>
-		</v-layout>
-		<KeyWord />
+		
+		<div class="solutionDetail">
+			<KeyWord />
+			<Propose />
+		</div>
 	</div>
 </template>
 
 <script>
 import KeyWord from '@/components/Keyword'
+import Propose from '@/components/Propose'
 
 export default {
 	data: () => ({
@@ -57,7 +50,8 @@ export default {
 	}),
 
 	components: {
-		KeyWord
+		KeyWord,
+		Propose,
 	}
 }
 </script>
@@ -74,6 +68,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		margin-bottom: 60px;
 	}
 	.select-box p {
 		font-size: 21px;
@@ -109,5 +104,10 @@ export default {
 		font-size: 21px;
 		font-weight: 700;
 		letter-spacing: -0.025em;
+	}
+
+	.solutionDetail {
+		display: flex;
+		justify-content: space-between;
 	}
 </style>
