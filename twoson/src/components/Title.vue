@@ -1,7 +1,7 @@
 <template>
 	<div class="titleWrap">
 		<h2 class="txtTitle">{{ titleOfChild }}</h2>
-		<h3 class="subTitle">{{ subTitleOfChild }}</h3>
+		<h3 class="subTitle">{{ subTitleOfChild01 }}<br>{{ subTitleOfChild02 }}</h3>
 	</div>
 </template>
 
@@ -19,7 +19,10 @@ export default {
 		titleOfChild: {
 			type: String,
 		},
-		subTitleOfChild: {
+		subTitleOfChild01: {
+			type: String
+		},
+		subTitleOfChild02: {
 			type: String
 		},
 	},
@@ -29,7 +32,7 @@ export default {
 <style>
 	.titleWrap {
 		text-align: center;
-		padding: 110px 0 90px;
+		padding-bottom: 90px;
 		letter-spacing: -0.025em;
 	}
 	.txtTitle {
@@ -38,7 +41,7 @@ export default {
 		margin-bottom: 20px;
 	}
 	.subTitle {
-		font-size: 23px;
+		font-size: 21px;
 		font-weight: 300;
 	}
 </style>

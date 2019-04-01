@@ -2,6 +2,7 @@
 	<div id="main-visual">
 		<div class="overlay"></div>
 		<Header />
+		<Nav />
 		<div class="main-copy">
 			<h3 class="main-sub-title">두손소프트는 향합니다</h3>
 			<h2 class="main-title">SI 사업 기반<br> 자체 플랫폼 서비스</h2>
@@ -16,7 +17,7 @@ export default {
 		return {
 			copy: '자세히 보기'
 		}
-	}
+	},
 }
 </script>
 

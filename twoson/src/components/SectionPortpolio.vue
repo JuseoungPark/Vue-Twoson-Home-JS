@@ -1,5 +1,5 @@
 <template>
-	<div class="sec-portpolio">
+	<div class="secPortpolio">
 		<v-container>
 			<Project />
 		</v-container>
@@ -12,12 +12,13 @@ export default {
 </script>
 
 <style>
-	.sec-portpolio {
+	.secPortpolio {
 		content: '';
 		display: block;
 		background: url('../assets/portpolio-bg.png') 50% 50% no-repeat;
 		background-size: cover;
 		width: 100%;
 		height: 130vh;
+		position: relative;
 	}
 </style>

@@ -46,22 +46,26 @@ export default {
 </script>
 
 <style>
+	#portPolio {
+		position: absolute;
+		bottom: 0;
+	}
 	#portPolio .project {
 		width: 50%;
 		padding: 50px 70px 0 70px;
 		float: left;
 	}
 	#portPolio .project.ing {
-		height: 720px;
+		height: 820px;
 		background: url('../assets/project-ing.png') 47% 50% no-repeat;
 	}
 	#portPolio .project.complete {
-		height: 360px;
+		height: 410px;
 		background: url('../assets/project-suggest.png') 0 50% no-repeat;
 		background-size: cover;
 	}
 		#portPolio .project.suggest {
-		height: 360px;
+		height: 410px;
 		background: #EEEEEE;
 	}
 	#portPolio .projectTitle {

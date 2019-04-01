@@ -18,7 +18,12 @@ Vue.component ('Project', Project)
 import Button from '@/components/Button'
 Vue.component ('btn', Button)
 
+import Nav from '@/components/nav'
+Vue.component ('Nav', Nav)
+
 Vue.config.productionTip = false
+
+export const eventBus = new Vue()
 
 new Vue({
 	router,

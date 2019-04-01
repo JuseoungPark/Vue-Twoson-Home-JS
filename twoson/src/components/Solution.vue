@@ -2,7 +2,8 @@
 	<div id="solution">
 		<Title
 			:titleOfChild="title"
-			:subTitleOfChild="subTitle"
+			:subTitleOfChild01="subTitle01"
+			:subTitleOfChild02="subTitle02"
 		></Title>
 		<div class="occupational-group-search">
 			<div class="select-box">
@@ -26,42 +27,57 @@
 				</v-menu>
 				<em>관련 사업을 하고 있습니다.</em>
 			</div>
-			<button>검색하기</button>	
 		</div>
 		
 		<div class="solutionDetail">
 			<KeyWord />
 			<Propose />
 		</div>
+
+		<button @click="show = !show" class="typeOfSolution">나를 눌러보시지</button>
+
+		<transition name="slide-fade">
+			<TypeOfSolution v-if="show" />
+		</transition>
+		<!-- <TypeOfSolution /> -->
+
 	</div>
 </template>
 
 <script>
+import { eventBus } from '@/main'
 import KeyWord from '@/components/Keyword'
 import Propose from '@/components/Propose'
+import TypeOfSolution from '@/components/TypeOfSolution'
 
 export default {
 	data: () => ({
 		title: '맞춤 솔루션',
-		subTitle: '상황에 알맞는 솔루션을 찾아보세요. <br>TS Solution은 경험을 바탕으로 한 기술을 모토로 달려왔습니다.',
+		subTitle01: '상황에 알맞는 솔루션을 찾아보세요.',
+		subTitle02: 'TS Solution은 경험을 바탕으로 한 기술을 모토로 달려왔습니다.',
+		
 		items: [
 			'보험', '카드', '은행', '유통', '서비스', '교육', '의료'
 		],
+
+		show: false,
 	}),
 
 	components: {
 		KeyWord,
 		Propose,
+		TypeOfSolution,
 	}
 }
 </script>
 
 <style>
 	#solution {
-		padding-bottom:60px;
+		padding: 110px 60px;
 		text-align: center;
 		width: 75%;
 		margin: 0 auto;
+		height: 990px;
 	}
 	.occupational-group-search {
 		text-align: left;
@@ -109,5 +125,21 @@ export default {
 	.solutionDetail {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.typeOfSolution {
+		position: relative;
+		z-index: 999;
+	}
+	.slide-fade-enter-active {
+		transition: all .3s ease;
+	}
+	.slide-fade-leave-active {
+		transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+	}
+	.slide-fade-enter, .slide-fade-leave-to
+	/* .slide-fade-leave-active below version 2.1.8 */ {
+		transform: translateX(10px);
+		opacity: 0;
 	}
 </style>

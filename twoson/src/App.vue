@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
 		<MainVisual></MainVisual>
+		<Aside />
 		<Portpolio></Portpolio>
 		<!-- <CurrentPortpolio></CurrentPortpolio> -->
 		<Solution></Solution>
@@ -23,6 +24,7 @@ import News from '@/components/SectionNews'
 import NewsSlide from '@/components/newsSlide'
 import footerMenuList from '@/components/footerMenu'
 import SecTitle from '@/components/SectionTitle'
+import Aside from '@/components/Aside'
 
 export default {
 	name: 'app',
@@ -36,6 +38,7 @@ export default {
 		NewsSlide,
 		footerMenuList,
 		SecTitle,
+		Aside,
 	},
 }
 </script>
@@ -47,14 +50,18 @@ export default {
 	}
 	.inner,
 	.innerWrap {
-		width: 1200px;
+		width: 75%;
 		margin: 0 auto;
-		display: flex;
+		/* display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: center; */
+		position: relative;
 	}
 	.clear::after {
 		content: '';
 		clear: both;
+	}
+	ul {
+		padding: 0;
 	}
 </style>

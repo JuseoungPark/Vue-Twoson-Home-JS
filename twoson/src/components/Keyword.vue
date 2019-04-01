@@ -50,7 +50,7 @@ export default {
 
 <style>
 	.popularityKeyword {
-		/* width: ; */
+		min-width: 34%;
 		text-align: left;
 	}
 	.popularityKeyword h4 {
@@ -77,5 +77,9 @@ export default {
 		border-radius: 5px;
 		font-size: 17px;
 		font-weight: 400;
+	}
+	.popularityKeyword ul li button:hover {
+		background: #374D9F;
+		color: #ffffff;
 	}
 </style>

@@ -1,11 +1,11 @@
 <template>
 		<div id="header">
 			<div class="inner">
-				<v-toolbar-side-icon dark></v-toolbar-side-icon>
-				<h1>
+				<a href="" class="menuIcon"></a>
+				<h1 class="logo">
 					<img :src="img" :alt="imgAlt">
 				</h1>
-				<button>{{ contact }}</button>
+				<button class="contact">{{ contact }}</button>
 			</div>
 		</div>
 </template>
@@ -17,7 +17,7 @@ export default {
 		return {
 			img: require('@/assets/logo.png'),
 			imgAlt: '두손소프트 로고',
-			contact: '컨텍할거면 클릭해라'
+			contact: 'CONTACT'
 		}
 	}
 }
@@ -32,9 +32,31 @@ export default {
 		height: 114px;
 		width: 100%;
 		border-bottom: 1px solid rgba(255, 255, 255, .4);
-		padding-top: 28px;
 	}
 	#header button {
 		color: #fff;
+	}
+	#header .menuIcon {
+		position: absolute;
+    top: 46px;
+    left: 0;
+    width: 37px;
+    height: 23px;
+		background: url('../assets/menu-btn.png') 0 0 no-repeat;
+	}
+	#header .logo {
+		position: absolute;
+    top: 29px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 135px;
+    height: 56px;
+	}
+	#header .contact {
+		position: absolute;
+    top: 45px;
+    right: 0;
+		width: 78px;
+		font-size: 17px;
 	}
 </style>

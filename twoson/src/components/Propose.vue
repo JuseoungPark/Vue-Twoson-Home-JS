@@ -5,8 +5,8 @@
 			<li v-for="solution in solutions" :key="solution.key">
 				<a :href="solution.link">
 					<figure>
-						<img :src="require(`@/assets/${solution.img}.png`)" :alt="solution.imgAlt">
-						<figcaption class="solutionName">{{ solution.name }}</figcaption>
+						<img :src="require(`@/assets/${solution.img}.png`)" :alt="solution.imgAlt"><!--
+						--><figcaption class="solutionName">{{ solution.name }}</figcaption>
 					</figure>
 				</a>
 			</li>
@@ -48,6 +48,7 @@ export default {
 		font-weight: 600;
 		letter-spacing: -0.04em;
 		margin-bottom: 20px;
+		width: 132px;
 	}
 	.proposeList {
 		display: flex;
@@ -55,7 +56,7 @@ export default {
 	.proposeList li {
 		width: 280px;
 		height: 400px;
-		margin-right: 66px;
+		margin-right: 46px;
 	}
 	.proposeList li:last-of-type {
 		margin-right: 0;
@@ -70,6 +71,8 @@ export default {
 	}
 	.solutionName {
 		background: #ffffff;
-		color: #000;
+		color: #222;
+		font-size: 17px;
+		padding: 8px 0;
 	}
 </style>
