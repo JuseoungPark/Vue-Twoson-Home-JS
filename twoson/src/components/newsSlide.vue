@@ -1,20 +1,18 @@
 <template>
 	<div class="newsSlide">
-		<ul>
-			<li
-				v-for="Slides in Slide"
-				:key="Slides.key"
-			>
-				<button @click="pages()">{{ Slides.imgTitle }}</button>
-				<!-- <img src="../assets/logo.png" alt=""> -->
-				<v-img
-					:src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`"
-					width="250px"
-					height="250px"
-					class="radius"
-				></v-img>
-			</li>
-		</ul>
+		<!-- Slider main container -->
+		<div class="twosonNews">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide" v-for="Slide in news" :key="Slide.key">
+					<img :src="require(`@/assets/news-${Slide.thumb}.jpg`)" :alt="Slide.alt">
+					<div class="overlay"></div>
+				</div>
+			</div>
+			<!-- If we need scrollbar -->
+    	<div class="swiper-scrollbar"></div>
+		</div>
 	</div>
 </template>
 
@@ -23,12 +21,23 @@ export default {
 	name: 'NewsSlide',
 	data () {
 		return {
-			Slide: [
-				{ fileName: 'logo.png', imgTitle: '제목입니다' },
-				{ fileName: 'ddssdfsdfsdfsdfdfsd', imgTitle: '둘째 제목입니다' },
-				{ fileName: 'ddssdfsdfsdfsdfsd', imgTitle: '셋째 제목입니다' },
-				{ fileName: 'ddsfsdfsdfsdfsdfsfsdfsdfsdfsd', imgTitle: '넷째 제목입니다' },
-				{ fileName: 'ddsfsdfsdfsdfsdfsfsdfsdfsdfsd', imgTitle: '다섯째 제목입니다' }
+			news: [
+				{
+					thumb: '01',
+					alt: '뉴스 1',
+				},
+				{
+					thumb: '02',
+					alt: '뉴스 2',
+				},
+				{
+					thumb: '03',
+					alt: '뉴스 3',
+				},
+				{
+					thumb: '04',
+					alt: '뉴스 4',
+				},
 			]
 		}
 	},
@@ -41,11 +50,16 @@ export default {
 </script>
 
 <style>
-	.newsSlide li {
-		display: inline-block;
-		margin-right: 40px;
+	.twosonNews .swiper-slide {
+		width: 356px;
+		height: 356px;
+		overflow: hidden;
 	}
-	.radius {
-		border-radius: 50%;
+	.twosonNews .swiper-slide img {
+		width: auto;
+		height: 100%;
+	}
+	.twosonNews .swiper-slide .overlay {
+		display: none;
 	}
 </style>

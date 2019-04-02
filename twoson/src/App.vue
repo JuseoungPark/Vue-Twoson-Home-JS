@@ -3,10 +3,7 @@
 		<MainVisual></MainVisual>
 		<Aside />
 		<Portpolio></Portpolio>
-		<!-- <CurrentPortpolio></CurrentPortpolio> -->
 		<Solution></Solution>
-		<!-- <selectBox></selectBox> -->
-		<!-- <SelectBox /> -->
 		<News></News>
 		<footerMenuList />
 		<Footer />
@@ -22,7 +19,6 @@ import SelectBox from '@/components/Select'
 import News from '@/components/SectionNews'
 import NewsSlide from '@/components/newsSlide'
 import footerMenuList from '@/components/footerMenu'
-import SecTitle from '@/components/SectionTitle'
 import Aside from '@/components/Aside'
 
 export default {
@@ -36,7 +32,6 @@ export default {
 		News,
 		NewsSlide,
 		footerMenuList,
-		SecTitle,
 		Aside,
 	},
 }
@@ -51,9 +46,7 @@ export default {
 	.innerWrap {
 		width: 75%;
 		margin: 0 auto;
-		/* display: flex;
-		justify-content: space-between;
-		align-items: center; */
+		height: 100%;
 		position: relative;
 	}
 	.clear::after {
@@ -62,5 +55,9 @@ export default {
 	}
 	ul {
 		padding: 0;
+	}
+	.hidden {
+		text-indent: -9999px;
+		font-size: 0;
 	}
 </style>

@@ -41,7 +41,7 @@ export default {
 		position: fixed;
 		z-index: 9999;
 		right: 0;
-		bottom: 174px;
+		bottom: 154px;
 	}
 	.aside .snsIcon {
 		background: rgba(0, 0, 0, .4);

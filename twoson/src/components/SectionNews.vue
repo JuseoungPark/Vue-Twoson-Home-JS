@@ -6,17 +6,14 @@
 			:subTitleOfChild02="subTitle02"
 		></Title>
 		<NewsSlide />
-		<SecTitle></SecTitle>
 	</div>
 </template>
 
 <script>
-import SecTitle from '@/components/SectionTitle'
 import NewsSlide from '@/components/newsSlide'
 
 export default {
 	components: {
-		SecTitle,
 		NewsSlide
 	},
 

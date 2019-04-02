@@ -1,8 +1,8 @@
 <template>
 	<div class="secPortpolio">
-		<v-container>
+		<div class="innerWrap">
 			<Project />
-		</v-container>
+		</div>
 	</div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 		background: url('../assets/portpolio-bg.png') 50% 50% no-repeat;
 		background-size: cover;
 		width: 100%;
-		height: 130vh;
+		height: 116vh;
 		position: relative;
 	}
 </style>

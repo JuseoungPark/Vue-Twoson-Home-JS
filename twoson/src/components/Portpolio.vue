@@ -8,7 +8,7 @@
 			>
 				<h4 class="projectTitle">{{ project.title }}</h4>
 				<h5 class="projectSubTitle" v-html="project.subTitle"></h5>
-				<button class="moreView">{{ project.more }}</button>
+				<button class="moreView"><span class="hidden">자세히 보기</span></button>
 			</div>
 		</div>
 	</div>
@@ -22,20 +22,17 @@ export default {
 				{
 					title: '진행중인 프로젝트',
 					subTitle: '두손소프트가 새롭게 진행하는 <br>프로젝트입니다.',
-					more: '더보기',
 					class: 'project ing'
 				},
 				{
 					title: '완료한 프로젝트',
 					subTitle: '두손소프트가 오픈시킨 프로젝트입니다. <br>한번 고객과 쌓은 신뢰는 무너지지 않습니다.',
-					more: '더보기',
 					class: 'project complete',
 					black: 'blackTxt'
 				},
 				{
 					title: '입찰 제안',
 					subTitle: '두손소프트가 입찰 제안한 프로젝트입니다. 우리의 기술을 자부합니다.',
-					more: '더보기',
 					class: 'project suggest',
 					black: 'blackTxt'
 				}

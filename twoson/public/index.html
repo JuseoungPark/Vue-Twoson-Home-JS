@@ -8,9 +8,9 @@
 		<title>twoson</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 	</head>
 	<body>
@@ -22,18 +22,29 @@
 	</body>
 
 	<script>
-			var mySwiper = new Swiper('.swiper-container', {
-				fadeEffect: {
-					crossFade: true
-				},
-				autoplay: {
-					delay: 5000,
-				},// autoplay
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-				loop:true,
-			});
+		var mainSwiper = new Swiper('.swiper-container', {
+			autoplay: {
+				delay: 5000,
+			},// autoplay
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+			loop:true,
+		});
+
+		$(".swiper-button-pause").on('click', function(){
+			mainSwiper.autoplay.stop();
+			console.log('잠시 멈출거야!')
+		});
+
+		$(".swiper-button-play").on('click', function(){
+			mainSwiper.autoplay.play();
+		});
+
+		// 두손 소식 슬라이드
+		var newsSwiper = new Swiper('.twosonNews', {
+			loop:true,
+		});
 	</script>
 </html>

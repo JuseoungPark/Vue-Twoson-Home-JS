@@ -46,7 +46,7 @@ export default {
 <style>
 	#gnb {
 		position: absolute;
-		top: 134px;
+		top: 128px;
 		left: 0;
 		z-index: 999;
 		width: 100%;
@@ -55,10 +55,10 @@ export default {
 		display: flex;
 	}
 	.gnb li {
-		margin-right: 100px;
-		font-size: 20px;
+		margin-right: 40px;
+		font-size: 17px;
 		color: #fff;
-		font-weight: 400;
+		font-weight: 700;
 		letter-spacing: -0.04em;
 	}
 	.gnb li:last-of-type {
@@ -86,7 +86,7 @@ export default {
 		width: 0;
 		background: #fff;
 		left: 0;
-		top: -22px;
+		top: -16px;
 	}
 	.gnb a.after:hover:after{
 		width:100%;
