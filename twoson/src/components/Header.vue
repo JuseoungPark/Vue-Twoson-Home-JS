@@ -12,7 +12,6 @@
 
 <script>
 export default {
-	name: 'head',
 	data () {
 		return {
 			img: require('@/assets/logo.png'),

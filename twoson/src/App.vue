@@ -7,8 +7,7 @@
 		<Solution></Solution>
 		<!-- <selectBox></selectBox> -->
 		<!-- <SelectBox /> -->
-		<News>
-		</News>
+		<News></News>
 		<footerMenuList />
 		<Footer />
 	</div>

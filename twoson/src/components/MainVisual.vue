@@ -1,6 +1,7 @@
 <template>
 	<div id="main-visual">
 		<div class="overlay"></div>
+		<MainSlide />
 		<Header />
 		<Nav />
 		<div class="main-copy">
@@ -12,24 +13,30 @@
 </template>
 
 <script>
+import MainSlide from '@/components/Swiper'
+
 export default {
 	data () {
 		return {
 			copy: '자세히 보기'
 		}
 	},
+
+	components: {
+		MainSlide,
+	}
 }
 </script>
 
 <style>
-	#main-visual {
-		background: url('../assets/main-visual-01.png') 50% 50% no-repeat;
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
 		width: 100%;
 		height: 100vh;
-	}
-	.overlay {
-		height: 100vh;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, .3)
 	}
 	.main-copy {
 		position: absolute;
