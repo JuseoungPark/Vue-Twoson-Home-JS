@@ -50,16 +50,28 @@ export default {
 </script>
 
 <style>
+	.twosonNews {
+		width: 356px;
+		height: 356px;
+		margin-top: 50px;
+	}
 	.twosonNews .swiper-slide {
 		width: 356px;
 		height: 356px;
 		overflow: hidden;
+		border-radius: 50%;
+		margin-right: 26px;
 	}
 	.twosonNews .swiper-slide img {
-		width: auto;
-		height: 100%;
+		width: 200%;
+		height: auto;
 	}
 	.twosonNews .swiper-slide .overlay {
 		display: none;
 	}
+	/* .twosonNews .swiper-scrollbar {
+		position: absolute;
+		bottom: 60px;
+		left: 100px;
+	} */
 </style>

@@ -5,6 +5,9 @@
 			:subTitleOfChild01="subTitle01"
 			:subTitleOfChild02="subTitle02"
 		></Title>
+		<btn
+			:classOfChild="btnColor"
+		></btn>
 		<NewsSlide />
 	</div>
 </template>
@@ -22,6 +25,7 @@ export default {
 			title: '두손 소식',
 			subTitle01: '뉴스부터 사내 소식까지',
 			subTitle02: '두손소프트의 따끈따근한 이야기를 전해드립니다.',
+			// btnColor: 'whiteBtn'
 		}
 	}
 }
